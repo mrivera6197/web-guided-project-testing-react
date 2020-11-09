@@ -7,7 +7,8 @@ test("MissionFrom renders correctly", ()=>{
 });
 
 test("renders message when isFetchingData is true", ()=>{
-
+    render(<MissionForm isFetchingData={true}/>);
+    
 });
 
 test("renders button when isFetchingData is false", ()=>{
