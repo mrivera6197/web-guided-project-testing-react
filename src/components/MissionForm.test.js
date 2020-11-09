@@ -35,7 +35,6 @@ test("calls getData when button is pressed", ()=>{
     fireEvent.click(button);
 
     //assert
-    console.log(mockGetData.mock);
     expect(mockGetData.mock.calls.length === 1);
     expect(mockGetData.mock.calls.length).toBe(1);
     expect(mockGetData.mock.calls).toHaveLength(1);
