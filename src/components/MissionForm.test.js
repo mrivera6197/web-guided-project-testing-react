@@ -15,6 +15,7 @@ test("renders message when isFetchingData is true", ()=>{
 
     //assert: text is what we expect it to be
     expect(fetchingText).not.toBeNull();
+    expect(fetchingText).toBeInTheDocument();
 });
 
 test("renders button when isFetchingData is false", ()=>{
