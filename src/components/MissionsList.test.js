@@ -7,5 +7,9 @@ test("renders without errors", ()=> {
 });
 
 test("rerenders correctly when passing in new mission data", ()=>{
-    const {rerender} = render(<MissionsList missions={[]/>);
+    const {rerender} = render(<MissionsList missions={[]}/>);
+    let missionObjects = screen.queryAllByTestId("mission");
+    expect(missionObjects).toStrictEqual([]);
+
+    
 });
