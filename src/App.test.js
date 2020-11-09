@@ -2,7 +2,7 @@ import React from 'react';
 import {fireEvent, render, screen, waitFor} from "@testing-library/react";
 import App from './App';
 
-import { fetchMission as mockFetchMissions } from './api/fetchMissions';
+import { fetchMissions as mockFetchMissions } from './api/fetchMissions';
 jest.mock('./api/fetchMissions');
 
 test("render without errors", ()=>{
@@ -23,6 +23,7 @@ test('fetches and renders mission data', async ()=> {
     fireEvent.click(button);
 
     await waitFor(()=>{
+        console.log(mockFetchMissions);
         const missions = screen.getAllByTestId("mission");
         expect(missions).toHaveLength(10);
     });
