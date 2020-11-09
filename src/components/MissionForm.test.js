@@ -36,5 +36,8 @@ test("calls getData when button is pressed", ()=>{
 
     //assert
     console.log(mockGetData.mock);
-    expect(mockGetData.mock.calls.lenth === 1);
+    expect(mockGetData.mock.calls.length === 1);
+    expect(mockGetData.mock.calls.length).toBe(1);
+    expect(mockGetData.mock.calls).toHaveLength();
+    expect(mockGetData).toHaveBeenCalledTimes(1);
 });
