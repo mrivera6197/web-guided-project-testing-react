@@ -8,5 +8,9 @@ test("render without errors", ()=>{
 
 test('fetches and renders mission data', async ()=> {
     render(<App/>);
+
+    const button = screen.getByRole("button");
+    fireEvent.click(button);
+
     
 });
