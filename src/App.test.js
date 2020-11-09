@@ -2,6 +2,8 @@ import React from 'react';
 import {fireEvent, render, screen, waitFor} from "@testing-library/react";
 import App from './App';
 
+import { fetchMission as mockFetchMissions } from './api/fetchMissions';
+
 test("render without errors", ()=>{
     render(<App/>);
 });
