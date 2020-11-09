@@ -14,5 +14,6 @@ test('fetches and renders mission data', async ()=> {
 
     await waitFor(()=>{
         const missions = screen.getAllByTestId("mission");
+        expect(missions).toHaveLength(10);
     });
 });
