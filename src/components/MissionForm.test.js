@@ -33,6 +33,9 @@ test("calls getData when button is pressed", ()=>{
     //act
     const button = screen.getByRole("button");
     fireEvent.click(button);
+    fireEvent.click(button);
+    fireEvent.click(button);
+    fireEvent.click(button);
 
     console.log(mockGetData.mock);
 });
