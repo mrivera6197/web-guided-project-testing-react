@@ -23,8 +23,8 @@ test('fetches and renders mission data', async ()=> {
     fireEvent.click(button);
 
     await waitFor(()=>{
-        console.log(mockFetchMissions);
+        console.log(mockFetchMissions.mock);
         const missions = screen.getAllByTestId("mission");
-        expect(missions).toHaveLength(10);
+        expect(missions).toHaveLength(2);
     });
 });
