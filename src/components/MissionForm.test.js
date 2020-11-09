@@ -38,6 +38,6 @@ test("calls getData when button is pressed", ()=>{
     console.log(mockGetData.mock);
     expect(mockGetData.mock.calls.length === 1);
     expect(mockGetData.mock.calls.length).toBe(1);
-    expect(mockGetData.mock.calls).toHaveLength();
+    expect(mockGetData.mock.calls).toHaveLength(1);
     expect(mockGetData).toHaveBeenCalledTimes(1);
 });
