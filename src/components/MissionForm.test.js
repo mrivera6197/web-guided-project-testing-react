@@ -18,7 +18,11 @@ test("renders message when isFetchingData is true", ()=>{
     expect(fetchingText).toBeInTheDocument();
 });
 
-test("renders button when isFetchingData is false", ()=>{
+test("renders button when isFetchingData is false", ()=> {
+    render(<MissionForm isFetchingData={false}/>);
+
+    const button = screen.queryByRole("button");
+    expect(button).not.toBeNull();
 
 });
 
