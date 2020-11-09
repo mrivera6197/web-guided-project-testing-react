@@ -12,5 +12,7 @@ test('fetches and renders mission data', async ()=> {
     const button = screen.getByRole("button");
     fireEvent.click(button);
 
-    
+    await waitFor(()=>{
+        const missions = screen.getAllByTestId("mission");
+    });
 });
